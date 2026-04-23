@@ -1,4 +1,4 @@
-# BayesProtNPSim
+# Toward computational risk assessment of nanoplastic impact on protein function: the case of vascular endothelial cadherin.
 
 Scripts used in the publication work can be found here.
 - charmm27.ff: the modified force field
