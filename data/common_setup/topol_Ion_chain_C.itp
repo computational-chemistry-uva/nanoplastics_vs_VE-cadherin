@@ -1,0 +1,35 @@
+;
+;	File 'topol_Ion_chain_C.itp' was generated
+;	By user: fkopczynski (1861)
+;	On host: carbon.science.uva.nl
+;	At date: Fri Jan  5 15:52:36 2024
+;
+;	This is a include topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2019.4 (-:
+;	
+;	Executable:   /usr/bin/gmx
+;	Data prefix:  /usr
+;	Working dir:  /home/fkopczynski/paper_cadherin/Ca_autom
+;	Command line:
+;	  gmx pdb2gmx -ignh -f EC1_Ca.pdb
+;	Force field was read from the standard GROMACS share directory.
+;
+
+[ moleculetype ]
+; Name            nrexcl
+Ion_chain_C         2
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+; residue 401 CAL rtp CAL  q +2.0
+     1        CAL    401    CAL    CAL      1          2      40.08   ; qtot 2
+; residue 403 CAL rtp CAL  q +2.0
+     2        CAL    403    CAL    CAL      2          2      40.08   ; qtot 6
+
+; Include Position restraint file
+#ifdef POSRES
+#include "posre_Ion_chain_C.itp"
+#endif
+
