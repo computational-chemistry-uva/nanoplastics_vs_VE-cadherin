@@ -1,0 +1,19 @@
+# unit: kcal / mol
+UNITS ENERGY=kcal/mol
+
+# defining COM separation
+c1: COM ATOMS=1-1689
+c2: COM ATOMS=1690-3378
+d1: DISTANCE ATOMS=c1,c2
+
+# defining steered MD parameters
+MOVINGRESTRAINT ...
+   LABEL=steer
+   VERSE=B
+   ARG=d1
+   STEP0=50000000  AT0=1.6  KAPPA0=500.0 
+   STEP1=52768000  AT1=3.1
+...
+
+# printing out collective variables
+PRINT STRIDE=500 ARG=* FILE=COLVAR
